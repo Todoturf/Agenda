@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("texto", R.string.texto_acerca_de);
                 intent.putExtra("encabezado", "Acerca de");
                 startActivity(intent);
+                finish();
                 //Toast.makeText(this, "Has pulsado ACERCA DE", Toast.LENGTH_LONG).show();
                 return true;
             case id.it_privacidad:

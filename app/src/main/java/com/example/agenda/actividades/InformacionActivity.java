@@ -16,12 +16,13 @@ public class InformacionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_informacion);
 
         txtMensaje = findViewById(R.id.txtMensaje);
-        txtTituloAgenda = findViewById(R.id.txtTituloAgenda;
+        txtTituloAgenda = findViewById(R.id.txtTituloAgenda);
         Bundle extras = getIntent().getExtras();
         int idTexto = extras.getInt("texto", 0);
+        int idEncabezado = extras.getInt("encabezado", 0);
 
         txtMensaje.setText(idTexto);
-        txtTituloAgenda.setText();
+        txtTituloAgenda.setText(idEncabezado);
 
     }
 }
