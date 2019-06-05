@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
 
-
         lstNotas = findViewById(id.lstNotas);
         fbNuevaNota = findViewById(id.fbNuevaNota);
 
@@ -123,11 +122,20 @@ public class MainActivity extends AppCompatActivity {
         {
             case id.it_acercade:
                 //TODO: mostrar pantalla acerca de
-                Toast.makeText(this, "Has pulsado ACERCA DE", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, InformacionActivity.class);
+                intent.putExtra("texto", R.string.texto_acerca_de);
+                intent.putExtra("encabezado", "Acerca de");
+                startActivity(intent);
+                //Toast.makeText(this, "Has pulsado ACERCA DE", Toast.LENGTH_LONG).show();
                 return true;
             case id.it_privacidad:
                 //TODO: mostrar pantalla politica de privacidad
-                Toast.makeText( this, "Has pulsado PRIVACIDAD", Toast.LENGTH_LONG).show();
+                Intent intent2 = new Intent(MainActivity.this, InformacionActivity.class);
+                intent2.putExtra("texto", R.string.PoliticaPrivacidad);
+                intent2.putExtra("encabezado", "Privacidad");
+                startActivity(intent2);
+                finish();
+               //Toast.makeText( this, "Has pulsado PRIVACIDAD", Toast.LENGTH_LONG).show();
                 return true;
             case id.it_sincronizar:
                 Toast.makeText(this, "Has pulsado SINCRONIZA", Toast.LENGTH_LONG).show();
@@ -138,7 +146,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
 
     // Fin menu
     protected void onStart()

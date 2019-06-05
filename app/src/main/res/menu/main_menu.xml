@@ -10,6 +10,7 @@
         android:title="@string/Privacidad" />
     <item
         android:id="@+id/it_sincronizar"
-        android:title="Sincroniza"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/Sincronizar"
         app:showAsAction="always" />
 </menu>

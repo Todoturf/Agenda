@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".actividades.PresentacionActivity"
+        <activity android:name=".actividades.InformacionActivity"
+            android:theme="@style/MyTheme.NoActionBar.Dialog"></activity>
+        <activity
+            android:name=".actividades.PresentacionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +22,7 @@
         </activity>
         <activity android:name=".actividades.ModificarNotaActivity" />
         <activity android:name=".actividades.nuevaNotaActivity" />
-        <activity android:name=".actividades.MainActivity">
-
-        </activity>
+        <activity android:name=".actividades.MainActivity"></activity>
     </application>
 
 </manifest>

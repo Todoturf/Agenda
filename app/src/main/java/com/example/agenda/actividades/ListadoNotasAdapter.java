@@ -12,7 +12,6 @@ import com.example.agenda.R;
 import com.example.agenda.datos.Nota;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class ListadoNotasAdapter extends ArrayAdapter<Nota>
 {
@@ -49,7 +48,7 @@ public class ListadoNotasAdapter extends ArrayAdapter<Nota>
 
         ImageView imageView = convertView.findViewById(R.id.imgCategoria);
         TextView txtFecha = convertView.findViewById(R.id.txtFecha);
-        TextView txtTexto = convertView.findViewById(R.id.txtTexto);
+        TextView txtTexto = convertView.findViewById(R.id.txtTituloAgenda);
 
         txtFecha.setText(nota.getFechatoString());
         txtTexto.setText(nota.getTexto());
